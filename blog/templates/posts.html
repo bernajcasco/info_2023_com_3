@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{% block contenido %}
+ <br>
+ <h1>Pagina 2 posts</h1>
+ <br>
+    {% for i in posts %}
+
+        <br>
+        <li>{{ i.titulo }}</li>
+        <li>{{ i.subtitulo }}</li>
+        <li>{{ i.nombre }}</li>
+
+        {% empty %}
+        <h1>No hay registros</h1>
+
+    {% endfor %}
+
+
+
+
+
+
+
+
+{% endblock %}
