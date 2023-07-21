@@ -1,0 +1,16 @@
+<!-- lista_noticias.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Noticias</h1>
+  <ul>
+    {% for noticia in noticias %}
+      <li>
+        <h2>{{ noticia.titulo }}</h2>
+        <p>{{ noticia.contenido }}</p>
+        <p>Fecha de publicación: {{ noticia.fecha_publicacion }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
